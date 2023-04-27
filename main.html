@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+	<style type="text/css">
+		@font-face{font-family: 'AVONE';
+    		src: url('./AVONE.ttf') format('truetype');}
+		@font-face{font-family: 'Chapaza.ttf';
+    		src: url('./Chapaza.ttf') format('truetype');}    	
+		body,section,nav,ul,li,a,h1,h2,h3,h4,h5,h6,hr,p{margin: 0; padding: 0}
+		nav{/*background-image: url(banner.jpg);
+				background-size: 100%*/;
+				display: block;
+			}
+		a{display: block;
+		padding: 10px 20px;
+		text-decoration: none;
+		color: #f5f1e8;
+		font-weight: 100;}
+		ul{margin-block-start: 0.4em;
+			margin-block-end: 0.4em;
+			margin-inline-start: 0px;
+			margin-inline-end: 0px;
+			padding-inline-start: 10px;}
+		li{list-style-type: none;
+			display: list-item;
+			font-size: 1em;
+			font-family: 'Noto Sans KR' , sans-serif;
+			}
+		h1{text-align: center;
+			padding-top: 340px;
+			color: #f5f1e8;
+			font-size: 10em;
+			font-family: AVONE;
+			font-weight: 100;
+			display: block;
+		    margin-inline-start: 0px;
+		    margin-inline-end: 10px;
+			line-height: 9.9rem;}
+		h3{text-align: center;
+		   	font-family: 'Noto Sans KR' , sans-serif;
+		   	font-weight: 500;
+		   	color: #f5f1e8;
+		   	padding-bottom: 10px}
+		h5{margin-block-start: 0em;
+			margin-block-end: 0em;}
+		p{text-align: center;
+		   	font-family: 'Noto Sans KR' , sans-serif;
+		   	font-weight: 300;
+		   	line-height: 2rem;
+		   	color: #f5f1e8;}
+
+		.wrapper{width: 1200px;
+				margin: auto;
+/*				background: yellow;}*/}
+		.flex{display: flex;
+			justify-content: space-around;}
+		.logo{display: block;}
+		.menu{width: 400px;}
+		.bg-banner{background-image: url(banner.jpg);
+			background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				padding-bottom: 70px}
+		.bg-green{background: #91aa85;
+				padding-top: 100px;
+				padding-bottom: 100px;
+				font-size: ;}
+		.s-button{width: 150px;
+				text-align: center;
+				margin: auto;
+				margin-top: 30px;
+				border: 1.2px solid #fcf9f2;
+				font-family: 'Noto Sans KR' , sans-sefif;
+				font-size: 1.4em;
+				font-weight: 300;
+				color: #fcf9f2;
+				padding: 4px;
+				padding-bottom: 6px;}
+		.s-button:hover{background-color: #f5f1e8; color: #1a4f1a;}
+		.bg-ivory{background: #f5f1e8;
+				padding-top: 260px}
+		.ingredient{text-align: center;
+		   	font-family: 'Noto Sans KR' , sans-serif;
+		   	font-weight: 300;
+		   	font-size: 2em;
+		   	color: #1a4f1a;
+		   	padding-bottom: 20px}
+		.bg-ltgreen{background: #dee2d5;
+				padding-top: 10px;
+/*				padding-bottom: 100px}*/}
+		.effect{font-family: AVONE;
+				font-weight: 100;
+				font-size: 4.4em;
+				margin: auto;
+				text-align: center;
+				color: #91aa85;
+				padding: 0; margin: 0;
+				padding-top: 90px;}
+		.effect-2{font-family: 'Noto Sans KR' , sans-serif;
+				font-weight: 100;
+				font-size: 1.6em;
+				margin: auto;
+				text-align: center;
+				color: #91aa85;
+				padding-top: }
+		.table-1{border: 0.4px solid #1a4f1a;}
+		.howtouse{text-align: center;
+					font-family: 'Noto Sans KR' , sans-serif;
+					font-size: 1.7em;
+					font-weight: 300;
+					margin: auto;
+					color: #1a4f1a;
+					padding-bottom: 5px}
+		.step1{padding-top: 120px;
+				font-family: AVONE;
+				font-size: 1.8em;
+				font-weight: 500;
+				color: #1a4f1a;}
+		.step1-1{padding-top: 14px; margin: 0;
+				color: #333333; text-align: left;
+				font-size: 2.4em;
+				font-family: AVONE;
+				font-weight: 500;
+				padding-bottom: 40px}
+		.bg-ivory2{background: #f5f1e8;}
+		.bg-ltgreen2{background: #dee2d5;}
+		.bg-banner2{background-image: url(bgimg.jpg);
+					background-size: cover;
+					background-position: center;
+					background-attachment: fixed;}
+		.box{background-color: #f5f1e8;
+			font-family: 'Noto Sans KR' , sans-serif;
+			font-size: 2em;
+			text-align: center;
+			margin: auto;
+			padding-bottom: 38px;
+			padding-top: 26px;
+			font-family: 'Noto Sans KR' , sans-serif;
+			font-weight: 400;
+			color: #1a4f1a;
+			border: 1px solid #1a4f1a;
+			line-height: 1.3em;
+			letter-spacing: -10}
+		.box-1{
+			font-family: 'Noto Sans KR' , sans-serif;
+			font-size: 1em;
+			text-align: center;
+			margin: auto;
+			
+			font-family: 'Noto Sans KR' , sans-serif;
+			font-weight: 400;
+			color: #1a4f1a;
+			
+			line-height: 1.3em;
+			letter-spacing: -10}
+		.shop{font-family: font-family: 'Noto Sans KR' , sans-serif;
+			font-weight: 300;
+			font-size: 1.8em;
+			color: #1a4f1a;
+			padding-bottom: -10px;
+			padding-top: 60px}
+		.ft-logo{padding-top: 160px;
+				margin: auto;}
+		.a:hover img{transform: scale(1.4);}
+		.b:hover color{}
+		.gun{color: #1a4f1a; 
+			left: 42.9%; 
+			text-align: center; 
+			font-family: 'Noto Sans KR' , sans-serif;
+			font-weight: 100;
+			font-size: 1.6em;
+			line-height: 1.5em;
+			top: 1056%;}
+		.gun2{color: #f5f1e8;
+			font-family: AVONE;
+			font-weight: 100;
+			font-size: 3.6em;
+			left: 76%;
+			top: 1050%;
+			line-height: 1em}
+		.fairy{color: #1a4f1a;
+			font-family: AVONE;
+			font-weight: 100;
+			font-size: 3.6em;
+			left: 7%;
+/*			padding-top: 570px;*/
+			top: 2948%;
+			line-height: 1em}
+		.fairy2{color: #1a4f1a; 
+			left: 75.6%; 
+			text-align: center; 
+			font-family: 'Noto Sans KR' , sans-serif;
+			font-weight: 100;
+			font-size: 1.6em;
+			line-height: 1.5em;
+			top: 2860%;}
+		.ciga{color: #f5f1e8;
+			font-family: AVONE;
+			font-weight: 100;
+			font-size: 3.6em;
+			left: 42%;
+/*			padding-top: 570px;*/
+			top: 4840%;
+			line-height: 1em}
+		.ciga2{color: #1a4f1a; 
+			left: 78.2%; 
+			text-align: center; 
+			font-family: 'Noto Sans KR' , sans-serif;
+			font-weight: 100;
+			font-size: 1.6em;
+			line-height: 1.5em;
+			top: 4740%;}
+		.event{width: 150px;
+				text-align: center;
+				margin: auto;
+				margin-top: 30px;
+				border: 1.2px solid #1a4f1a;
+				font-family: 'Noto Sans KR' , sans-sefif;
+				font-size: 1.4em;
+				font-weight: 300;
+				color: #1a4f1a;
+				padding: 4px;
+				padding-bottom: 6px;}
+		.challenge{padding-top: 30px;
+					padding-bottom: 10px;
+					text-align: center;
+					font-family: 'Noto Sans KR' , sans-sefif;
+					font-size: 1.8em;
+					font-weight: 300;
+					color: #1a4f1a}
+		.challenge2{text-align: center;
+					font-family: 'Noto Sans KR' , sans-sefif;
+					font-size: 1em;
+					font-weight: 300;
+					color: #1a4f1a}
+		.bg-challenge{background-image: url(challenge.jpg);
+					background-repeat: no-repeat;
+					background-attachment: local;}
+		.m1{font-family: AVONE;
+			font-weight: 100;
+			font-size: 6em;
+			color: #f5f1e8;
+			padding-top: 420px}
+		.m2{font-family: 'Noto Sans KR' , sans-serif;
+			font-weight: 300;
+			font-size: 3.6em;
+			color: #f5f1e8;}
+		.m3{font-family: 'Noto Sans KR' , sans-serif;
+			font-weight: 100;
+			font-size: 1.46em;
+			color: #f5f1e8;
+			padding-top: 16px;
+			padding-bottom: 70px}
+		.ch-bt{width: 130px;
+				left: 38%;
+				top: -190px}
+		.footer{margin: auto;
+			text-align: center;
+			font-family: 'Noto Sans KR' , sans-serif;
+			font-weight: 400;
+			font-size: 0.8em;
+			padding-top: 14px;
+			color: #1a4f1a}
+		.footer2{margin: auto;
+				text-align: center;
+				font-family: 'Noto Sans KR' , sans-serif;
+				font-weight: 300;
+				font-size: 0.6em;
+				color: #1a4f1a;
+				padding-top: 6px;
+				padding-bottom: 60px}
+
+
+
+	</style>
+
+	<title>NO-SMOKING BUBBLE BUBBLE</title>
+
+
+</head>
+<body>
+	<div class="bg-banner">
+		<nav>
+			<div>
+				<div class="  flex">
+					<div class="logo">
+						<a href="main.html" style="font-family: AVONE; font-size: 2.2vw;">NSBB.</a>
+					</div>
+					<ul class="menu flex">
+						<li>
+							<a href="#A">ABOUT</a>
+						</li>
+						<li>
+							<a href="#D">HOWTOUSE</a>
+						</li>
+						<li>
+							<a href="#B">PRODUCT</a>
+						</li>
+						<li>
+							<a href="#C">CHALLENGE</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header class="wrapper">
+			<h1>
+				No-Smoking
+				<br>
+				BubbleBubble.
+			</h1>
+			<div>
+				<h2 class="s-button" style="">Shop Now</h2>
+			</div>
+		</header>
+	</div>
+	<section class="bg-green" id="A">
+		<div class="wrapper">
+			<h3 style="font-size: 1.8em;">
+				매년 작심삼일로 끝나기만 했던 금연 다짐, 이제는 그만하고 싶지 않으신가요?
+			</h3>
+			<p style="margin: auto; width: 80%; padding-top: 4px; font-size: 1.4em;">
+			No-Smoking BubbleBubble 이전과 달리 새롭고 재미있는 금연 방식을 당신에게 제안합니다. NSBB.과 
+			<br>
+			함께라면 누구나 한 번에 금연에 성공할 수 있습니다. 사용 한 달 후, 놀라운 변화를 확인해보세요!</p>
+		</div>
+	</section>
+	<section class="bg-ivory">
+		<div class="wrapper">
+			<h4 class="ingredient" style="font-size: 1.7em;">
+				제품의 성분은 간단합니다!
+			</h4>
+			<img src="ingredients.png" style="width: 1200px; margin: auto; display: block;">
+			<!-- <hr class="table-1"> -->
+		</div>	
+	</section>
+	<section class="bg-ltgreen">
+		<div class="wrapper" style="padding-bottom: 0px;">
+			<h5 class="effect">
+				NSBB.
+			</h5>
+			<p class="effect-2">
+				<span style="font-family: AVONE">NSBB.</span>로부터 다양한 효능을 얻을 수 있습니다.
+			</p>
+			<img src="effect.png" style="margin: auto; display: block; width: 96%; padding-top: 40px; padding-bottom: 0px;">
+		</div>
+	</section>
+	<section class="bg-ivory" style="padding-top: 360px;" id="D">
+		<div class="wrapper" >
+			<h4 class="howtouse">
+				이렇게 사용해보세요!
+			</h4>
+			<hr style="border: 0.4px solid #1a4f1a; width: 236px; margin: auto;">
+			<h4 class="step1">
+				Step 1
+			</h4>
+			<p class="step1-1">
+				<span style="font-family: AVONE; font-weight: 100;">NSBB.</span>에 함께 동봉된 비눗물을 충분히 적셔주세요.
+			</p>
+			<img src="step1.png" style="padding-bottom: 160px;">
+		</div>
+	</section>
+	<section class="bg-ltgreen">
+		<div class="wrapper">
+			<p class="step1" style="text-align: left; ">
+				Step <span style="font-family: Chapaza;">2</span>
+			</p>
+			<p class="step1-1">
+				<span style="font-family: AVONE;">NSBB.</span> 막대의 끝에 입을 대고 준비해 주세요.
+			</p>
+			<img src="step2.png" style="padding-bottom: 160px;">
+		</div>
+	</section>
+	<section class="bg-ivory2">
+		<div class="wrapper">
+		<p class="step1" style="text-align: left; padding-top: 140px;">
+			Step <span style="font-family: Chapaza;">3</span>
+		</p>
+		<p class="step1-1">
+			니코틴으로 가득 찬 당신의 한 숨을 불어넣어주세요.
+		</p>
+		<img src="step3.png" style="padding-bottom: 140px;">
+	</section>
+	<section class="bg-ltgreen2">
+		<div class="wrapper">
+			<h4 class="step1" style="padding-bottom:40px;">
+				Simulation
+			</h4>
+			<video class="movie" muted autoplay style="width:1200px; padding-bottom: 140px;">
+				<source src="simulation.mp4" type="video/mp4">
+			</video>
+		</div>
+	</section>
+	<section class="bg-banner2">
+		<div class="wrapper">
+			<div style="padding-top:200px; padding-bottom: 200px;">
+				<div class="box">
+					<p class="box-1">
+					<span style="font-family: AVONE; font-weight:100; font-size: 0.7em;">* TIP *</span>
+					<br>싫어하는 사람 얼굴에 <span style="font-family: AVONE; font-weight:100;">NSBB.</span>을 불어보세요.
+					<br>금연 스트레스가 싹 가시는 마법!
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bg-ivory" id="B" style="padding-top: 360px">
+		<div class="wrapper">
+			<div>
+				<p class="shop"> 
+					다양한 종류의 <span style="font-family: AVONE; font-weight:100;">NSBB.</span>을 만나보세요! 
+				</p>
+				<div style="position: relative; margin: 0; padding: 0;" class="a">
+					<a href="https://search.shopping.naver.com/catalog/26886899373?query=%EB%B2%84%EB%B8%94%EA%B1%B4&NaPm=ct%3Dlgyfutv4%7Cci%3D8897b5f67d042a89f7075aba86caaf524aa92340%7Ctr%3Dslsl%7Csn%3D95694%7Chk%3De129a1d51182aaff16ee1037856108d46e5f90f4">
+					<img src="bubblegun.png" style="position: absolute; 
+					left: 1%; padding-top:110px;">
+					</a>
+					<div style="position: absolute;" class="gun">
+					나를 괴롭히는<br>
+					깐깐한 상사에게<br>
+					스트레스받을 때
+					</div>
+					<div class="gun2" style="position: absolute;">
+						Bubble<br>Gun.
+					</div>
+				</div>
+				<div style="position: relative; margin: 0; padding: 0;" class="a">
+					<div class="fairy" style="position: absolute;">
+						Fairytale<br>Bubble.
+					</div>
+					<a href="https://search.shopping.naver.com/catalog/32289555102?cat_id=50004224&frm=NVSCPRO&query=%EB%B2%84%EB%B8%94%EA%B1%B4&NaPm=ct%3Dlgygpqio%7Cci%3D27f2a95bef2f1c3ca29606c3ff73fb8e51150aeb%7Ctr%3Dsls%7Csn%3D95694%7Chk%3Dbdad9cb96a2d344f2eb07ef68bc9a57571196674">
+					<img src="fairy.png" style="position: absolute; top: 2360%; left: 35% ; width: 380px;">
+					<div style="position: absolute;" class="fairy2">
+					아이들 앞에서<br>
+					흡연할 수 없을 때<br>
+					(아이들도 너무<br>
+					좋아하네요 ~)
+					</div>
+					</a>
+				</div>
+				<div style="position: relative; margin: 0; padding: 0;" class="a">
+					<a href="https://search.shopping.naver.com/catalog/36647964750?cat_id=50004224&frm=NVSCPRO&query=%ED%91%B8%EC%8A%A4%ED%85%8C%ED%94%BD%EC%8A%A4&NaPm=ct%3Dlgyhj5xk%7Cci%3D268c9a110fdd41485978350f03e53aeb718d5460%7Ctr%3Dsls%7Csn%3D95694%7Chk%3D7fb3061a142de270b9b7328b5d678493873c13e8">
+					<img src="ciga.png" style="position: absolute; top: 860px; left: 2.8%">
+					<div style="position: absolute;" class="ciga">
+						Ciga<br>Bubble.
+					</div>
+					<div style="position: absolute;" class="ciga2">
+						오랜만의<br>
+						단체 술자리,<br>
+						식후땡이<br>
+						생각날 때
+					</div>
+					</a>
+				</div>
+				<img src="table.png" style="margin: auto; padding-top: -10; width: 1200px">
+			</div>
+		</div>
+	</section>
+	<section class="bg-ivory" id="C" style="padding-top: 360px">
+		<div class="wrapper" style="padding-bottom: 40px;">
+			<div class="event">
+				Event
+			</div>
+			<p class="challenge"><span style="font-family: AVONE; font-weight:100;">NSBB.</span>와 함께하는 폐활량 챌린지에 참여해보세요!</p>
+			<div style="background-color: #dee2d5; padding: 2px; width: 460px; margin: auto;">
+				<p class="challenge2">챌린지 성공 시 10만원 상당의 <span style="font-family: AVONE; font-weight:100;">NSBB.</span> 키트를 증정합니다.</p>
+			</div>
+		</div>
+	</section>
+	<section class="bg-challenge">
+		<div class="wrapper">
+			<div>
+				<h4 class="m1">Mission :</h4>
+				<h5 class="m2">비눗방울 5분 불기</h5>
+				<h6 class="m3">NSBB.과 함께한 후 변화한 당신의 폐활량을 느껴보세요.<br>
+					지금 바로 폐활량 챌린지를 공유하고 다른 이용자들의 변화도 함께 확인해보세요!</h6>
+			</div>
+			<div style="position:relative;">
+				<a href="https://www.instagram.com/explore/tags/비눗방울/">
+				<img src="challengebutton.png" style="position:absolute;" class="ch-bt">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="bg-ivory" style="padding-top: 100px; padding-bottom: 160px;">
+		<div class="wrapper">
+			<h4 class="howtouse">
+				명예의 전당
+			</h4>
+			<hr style="border: 0.4px solid #1a4f1a; width: 130px; margin: auto;">
+			
+		</div>
+	</section>
+	<footer class="bg-ivory2">
+		<div class="wrapper">
+			<hr style="border-top-style: 0.4px solid #1a4f1a; border-left:none ;width: 1200px;margin: auto; padding-bottom: 18px;">
+			<img src="footer.png" style="padding-top: 40px ; width:100px; margin: auto; display: block;" class="b">
+			<h4 class="footer">
+				This product can be used differently from the actual use.<br>
+				We are not responsible for all kinds of side effects such as bubble addiction.
+			</h4>
+			<h4 class="footer2">
+				© 2023. Chaeyeon Kim. All Rights Reserved.
+			</h4>
+			
+		</div>
+	</footer>
+</body>
+</html>
